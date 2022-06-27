@@ -1,0 +1,270 @@
+body{
+    background: #286efa;
+}
+.mainPage{
+    background: #286efa;
+    display: flex;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.leftSide{
+    background: #fff;
+    flex-grow: 7;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.rightSide{
+    flex-grow: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rightSideInnerArea {
+    max-width: 300px;
+    color: #fff;
+}
+.rightSideInnerArea > p {
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 300;
+}
+.leftSideInnerArea{
+    max-width: 500px;
+    padding: 20px;
+}
+.leftSideInnerArea a{
+    color: #286efa;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Signup Component */
+.formOuterBlock {
+    margin-top: 50px;
+}
+.formGroup {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .formField {
+    font-family: inherit;
+    width: calc(100% - 24px);
+    border: 0;
+    border: 1px solid #ededed;
+    outline: 0;
+    font-size: 1rem;
+    color: #333333;
+    padding: 12px 10px;
+    background: transparent;
+    transition: border-color 0.2s;
+    border-radius: 4px;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .formField::placeholder {
+    color: transparent;
+  }
+  .formField:placeholder-shown ~ .formLabel {
+    font-size: 1rem;
+    cursor: text;
+    top: 28px;
+    left: 10px;
+    background: #fff;
+    padding: 0 5px;
+  }
+  
+  .formLabel {
+    position: absolute;
+    top: 5px;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+    background: #fff;
+    left: 10px;
+    padding: 0 5px;
+}
+  
+  .formField:focus {
+    border-width: 1px;
+    border-color: #ededed;
+  }
+
+  .formField:focus ~ .formLabel {
+    position: absolute;
+    top: 5px;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #777777;
+    z-index: 9;
+  }
+  .formField:not(:placeholder-shown) ~ .formLabel {
+    z-index: 9;
+  }
+  .selectedValues {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border: 1px solid #ededed;
+    outline: 0;
+    font-size: 1rem;
+    color: #777777;
+    padding: 12px 10px;
+    background: transparent;
+    transition: border-color 0.2s;
+    border-radius: 4px;
+    z-index: 2;
+    position: relative;
+}
+.passwdInformation {
+    font-size: 12px;
+    margin: 8px 0 0;
+    color: #9b9b9b;
+}
+.selectedValues:focus{
+    color: #333;
+}
+.submitBtn {
+  background: none;
+  border: none;
+  font: inherit;
+  line-height: 1;
+  padding: 1em 2em;
+  width: 100%;
+  background-color: #ededed;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: none;
+  transition: 0.2s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
+}
+.submitBtn::after {
+  background-color: #286efa;
+  border-radius: 4px;
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.2s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+.submitBtn:hover::after {
+  transform: translate(0, 0);
+}
+.submitBtn:hover {
+  color: #fff;
+  will-change: transform;
+}
+
+.instructionBlock p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.topPageNavigation{
+  position:absolute;
+  top: 20px;
+  right: 20px;
+}
+.topPageNavigation span{
+  margin-left: 5px;
+  color: #000;
+  font-size: 12px;
+}
+.topPageNavigation span i{
+  font-size: 5px;
+  color: rgb(159, 159, 159);
+}
+.topPageNavigation .active i{
+  font-size: 5px;
+  color: #000;
+}
+.input-group-btn{
+  position: absolute;
+  right: 0;
+  top: 18px;
+  width: 40px;
+  height: 40px;
+  z-index: 9;
+}
+.input-group-btn button {
+  border: none;
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  color: #777;
+  padding: 10px;
+  cursor: pointer;
+}
+.input-group-btn button i{
+  font-size: 18px;
+}
+.selectedValues {
+  -moz-appearance:none; 
+  -webkit-appearance:none;
+  appearance:none;
+  background: transparent;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 9l8 8l8-8"/></svg>');
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 18px;
+  border: 1px solid #dfdfdf;
+  border-radius: 2px;
+  margin-right: 2rem;
+  padding: 1rem;
+  padding-right: 2rem;
+}
+.formErrorMsg{
+  color: #c30404;
+}
+.errorFormField{
+  border: 1px solid #c30404;
+}
+.errorFormField:focus {
+  border-width: 1px;
+  border-color: #c30404;
+}
+
+
+@media (max-width: 920px) {
+  .mainPage {
+    flex-direction: column-reverse;
+    overflow: hidden;
+  }
+  .rightSideInnerArea {
+    max-width: 500px;
+    padding: 40px 20px;
+  }
+}
+@media (max-width: 650px) {
+  .leftSideInnerArea {
+    padding: 40px 20px;
+  }
+  .formOuterBlock {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 402px) {
+  .leftSideInnerArea h1 {
+    font-size: 22px;
+  }
+}
